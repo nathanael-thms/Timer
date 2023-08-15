@@ -5,14 +5,34 @@
     
     <meta charset="UTF-8">
     
-    <title> Template </title>
+    <title> Timer </title>
     <link rel="stylesheet" href="css.css">
     <script src="js.js"></script>
     
   </head>
   
   <body>
-    
+    <h1> Timer </h1>
+    <div id="parent">
+      <span id="display">00:00:00</span><br>
+      <button onclick="play()" id="playButton">
+        play 
+        </button>
+
+        <button style="display: none;" id="pauseButton">
+
+         pause
+      </button>
+
+      <button onclick="reset()" class="buttonReset" id="resetButton">
+         reset
+      </button>
+    </div>
+    <div id="input">
+      seconds:<input type="number" min="1" max="59" id="seconds" name="seconds">
+      minutes:<input type="number" min="1" max="59" id="minutes" name="minutes">
+      hours:<input type="number" min="1" max="59" id="hours" name="hours">
+    </div>
   </body>
   
 </html>
