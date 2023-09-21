@@ -1,3 +1,4 @@
+let interval;
 function displayNumber(number) {
     return String(number).padStart(2, '0')
 }
@@ -8,8 +9,20 @@ function sleep(delay) {
     var start = new Date().getTime();
     while (new Date().getTime() < start + delay);
 }
+function hideobjet(item){
+    document.getElementById(item).style.display="none";
+}
+function showobject(object){
+    document.getElementById(object).style.display="inline"||"block";
+}
 function reset(){
-    location.reload()
+    location.reload();
+}
+function pause(){
+    clearTimeout(interval);
+    showobject("input");
+    showobject("playButton");
+    hideobjet("pauseButton");
 }
 function SetTimer(){
     const seconds=getNumber(document.getElementById("seconds"));
@@ -20,7 +33,7 @@ function SetTimer(){
     console.log("minutes: "+minutes);
     console.log("hours : "+hours);
     
-    document.getElementById("display").innerHTML=displayNumber(seconds)+":"+displayNumber(minutes)+":"+displayNumber(hours);
+    updateDisplay(seconds,minutes,hours);
     document.getElementById("input").style.display="none";
 
     return {
@@ -31,33 +44,33 @@ function SetTimer(){
     }
 }
 function PlayTimer(timer) {
+    hideobjet("input");
     if (timer.totalSeconds>0){
-        setTimeout(function(){
+        interval=setTimeout(function(){
             timer.totalSeconds=timer.totalSeconds-1;
             const newsecs=totalsecsConvert(timer.totalSeconds);
-            document.getElementById("display").innerHTML=displayNumber(newsecs.seconds)
-+":"+
-    displayNumber(newsecs.minutes)
-+":"+
-    displayNumber(newsecs.hours)
-;
-            PlayTimer(timer)
+            document.getElementById("seconds").value=newsecs.seconds;
+            document.getElementById("minutes").value=newsecs.minutes;
+            document.getElementById("hours").value=newsecs.hours;
+            updateDisplay(newsecs.seconds,newsecs.minutes,newsecs.hours);
+            PlayTimer(timer);
         },1000);
     }
     else {
-        reset()
+        reset(timer)
     }
 }
 function play(){
     const timer = SetTimer();
     PlayTimer(timer);
+    hideobjet("playButton");
+    showobject("pauseButton");
 }
-function updateDisplay(timerValueSecs,timerValueMins,timerValueHrs){
-    document.getElementById("display").innerHTML=timerValueSecs
+function updateDisplay(Secs,Mins,Hrs){
+    document.getElementById("display").innerHTML=displayNumber(Hrs)+":"+
+    displayNumber(Mins)
 +":"+
-    timerValueMins
-+":"+
-    timerValueHrs
+    displayNumber(Secs)
 ;
 }
 function totalsecsConvert(time){
@@ -73,8 +86,8 @@ function totalsecsConvert(time){
   let formattedSS = displayNumber(ss);
   let formattedHH = displayNumber(hh);
   return {
-    hours:ss,
+    hours:hh,
     minutes:mm,
-    seconds:hh,
+    seconds:ss,
   }
 }
