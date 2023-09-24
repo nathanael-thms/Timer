@@ -53,6 +53,8 @@ function PlayTimer(timer) {
             document.getElementById("minutes").value=newsecs.minutes;
             document.getElementById("hours").value=newsecs.hours;
             updateDisplay(newsecs.seconds,newsecs.minutes,newsecs.hours);
+            document.getElementById("title").innerHTML=displayNumber(newsecs.hours)+":"+displayNumber(newsecs.minutes)+
+            ":"+displayNumber(newsecs.seconds);
             PlayTimer(timer);
         },1000);
     }
