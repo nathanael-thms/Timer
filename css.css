@@ -1,63 +1,108 @@
-@media (min-width: 1292px){
-    @media (min-height: 625px){    
-        #parent{
-            margin-left: auto;
-            margin-right: auto;
-            margin-top: auto;
-            margin-bottom: auto;
-            width: 50%;
-            height: 50%;
-            font-size: 200px;
-        }
-        #playButton{
-            background-color: #00ff15;
-            width: 45%;
-            height: 50px;
-        }   
-
-        #pauseButton{
-            background-color: #ff0000;
-            width: 45%;
-            height: 50px;
-        }   
-        #resetButton {
-            width: 45%;
-            height: 50px;
-        }
-    }
+@media (min-width: 1292px) {
+  #parent {
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: auto;
+    margin-bottom: auto;
+    width: 50%;
+    height: 50%;
+    font-size: 200px;
+  }
+  #playButton {
+    background-color: #00ff15;
+    width: 45%;
+    height: 50px;
+  }
+  #pauseButton {
+    background-color: #ff0000;
+    width: 45%;
+    height: 50px;
+  }
+  #resetButton {
+    width: 45%;
+    height: 50px;
+  }
 }
-@media (max-width: 1292px){
-    @media (max-height: 625px){    
-        #parent{
-            margin-left: auto;
-            margin-right: auto;
-            margin-top: 40px;
-            margin-bottom: auto;
-            width: 50%;
-            height: 50%;
-            font-size: 120px;
-        }
-        #playButton{
-            background-color: #00ff15;
-            width: 45%;
-            height: 50px;
-        }   
-
-        #pauseButton{
-            background-color: #ff0000;
-            width: 45%;
-            height: 50px;
-        }   
-        #resetButton {
-            width: 45%;
-            height: 50px;
-        }
-    }
+@media (min-height: 625px) {
+  #parent {
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: auto;
+    margin-bottom: auto;
+    width: 50%;
+    height: 50%;
+    font-size: 200px;
+  }
+  #playButton {
+    background-color: #00ff15;
+    width: 45%;
+    height: 50px;
+  }
+  #pauseButton {
+    background-color: #ff0000;
+    width: 45%;
+    height: 50px;
+  }
+  #resetButton {
+    width: 45%;
+    height: 50px;
+  }
 }
-body{
+@media (max-width: 1292px) {
+  #parent {
+    margin-left: 200px;
+    margin-right: auto;
+    margin-top: 3%;
+    margin-bottom: auto;
+    width: 50%;
+    height: 50%;
+    font-size: 167px;
     text-align: center;
+  }
+  #playButton {
+    background-color: #00ff15;
+    width: 45%;
+    height: 50px;
+  }
+  #pauseButton {
+    background-color: #ff0000;
+    width: 45%;
+    height: 50px;
+  }
+  #resetButton {
+    width: 45%;
+    height: 50px;
+  }
 }
-#aboutMe{
-    text-align: center;
-    color: blue;
+@media (max-height: 625px) {
+  #parent {
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 4%;
+    margin-bottom: auto;
+    width: 50%;
+    height: 50%;
+    font-size: 120px;
+  }
+  #playButton {
+    background-color: #00ff15;
+    width: 45%;
+    height: 50px;
+  }
+  #pauseButton {
+    background-color: #ff0000;
+    width: 45%;
+    height: 50px;
+  }
+  #resetButton {
+    width: 45%;
+    height: 50px;
+  }
+}
+body {
+  text-align: center;
+}
+#aboutMe {
+  text-align: center;
+  color: blue;
 }
