@@ -99,6 +99,17 @@
     height: 50px;
   }
 }
+#uncompatible {
+  display: none;
+}
+@media (max-width:790px),(max-height:372px){
+  #website{
+    display: none;
+  }
+  #uncompatible{
+    display: block;
+  }
+}
 body {
   text-align: center;
 }
